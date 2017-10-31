@@ -4,17 +4,29 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.example</groupId>
+<<<<<<< HEAD
 	<artifactId>sprinboot</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>sprinboot</name>
+=======
+	<artifactId>demo</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>springboot</name>
+>>>>>>> 34d9cd13fc29e045a45fc061996fa143de9d22f5
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
+<<<<<<< HEAD
 		<version>1.5.7.RELEASE</version>
+=======
+		<version>1.4.2.RELEASE</version>
+>>>>>>> 34d9cd13fc29e045a45fc061996fa143de9d22f5
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
@@ -27,6 +39,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
+<<<<<<< HEAD
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 		<dependency>
@@ -47,11 +60,34 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+=======
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+>>>>>>> 34d9cd13fc29e045a45fc061996fa143de9d22f5
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+<<<<<<< HEAD
+=======
+		
+<dependency>
+    <groupId>com.h2database</groupId>
+    <artifactId>h2</artifactId>
+</dependency>
+		
+		
+>>>>>>> 34d9cd13fc29e045a45fc061996fa143de9d22f5
 	</dependencies>
 
 	<build>
