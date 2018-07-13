@@ -2,6 +2,11 @@ package com.example.demo;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.URL;
+import java.net.URLConnection;
 import java.util.Date;
 
 import org.junit.Ignore;
@@ -61,5 +66,27 @@ public class SprinbootApplicationTests {
 	public void testFindEmpOrderBySal() {
 		System.out.println(empRepo.findByhiredateAfter(new Date(1980, 1, 1)));
 	}
-	
+
+	@Test
+	public void testConnection() {
+
+		try {
+			URL url = new URL("http://localhost:8080/demo/emps");
+			URLConnection conn = url.openConnection();
+			InputStream is = conn.getInputStream();
+			BufferedReader br = new BufferedReader(new InputStreamReader(is));
+			String line;
+			while((line=br.readLine()) !=null) {
+				System.out.println(line);
+
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+
+		}
+
+	}
+
+
 }
