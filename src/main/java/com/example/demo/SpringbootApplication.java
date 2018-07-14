@@ -10,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jms.DefaultJmsListenerContainerFactoryConfigurer;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
@@ -31,10 +33,17 @@ import com.example.demo.model.Dept;
 import com.example.demo.model.Geometry;
 import com.example.demo.repository.DeptRepository;
 
+
+
 @SpringBootApplication
 @EnableJms
 //@Import(Myconfig.class)
+
+
+
 public class SpringbootApplication {
+
+
 	
       static TestBean testBean;
       ArrayList l;
@@ -107,3 +116,20 @@ public class SpringbootApplication {
 //	}
 	
 }
+
+
+//for war
+//@SpringBootApplication
+//public class  SpringbootApplication  extends SpringBootServletInitializer {
+//
+//	@Override
+//	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+//		return application.sources(SpringbootApplication.class);
+//	}
+//
+//	public static void main(String[] args) throws Exception {
+//		SpringApplication.run(SpringbootApplication.class, args);
+//	}
+//
+//}
+

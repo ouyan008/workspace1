@@ -1,21 +1,30 @@
 package com.example.demo;
 
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
-import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.*;
 import java.io.*;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
-import java.security.*;
-import java.security.cert.CertificateException;
+import java.security.KeyStore;
+import java.security.Security;
 
 
 /**
- * Created by ouyan on 7/8/2018.
+ * Created by ouyan on 7/8/2018. automate start embedded server
  */
-public class UrlTest {
+
+@RunWith(SpringRunner.class)
+//@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
+public class UrlTest2 {
+
+    //@Value("${local.server.port}")
+    private int port;
 
     @Test
     public void testUrl() {
